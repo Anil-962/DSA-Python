@@ -1,9 +1,13 @@
 class Solution:
     def squareIsWhite(self, c: str) -> bool:
-        column = ord(c[0])-ord('a')+1
-        row =int(c[1])
-        if((column+row)%2==0):
-            return False
+        if c[0] in "acge":
+            if c[1] in "1357":
+                return False
+            else:
+                return True
         else:
-            return True
+            if c[1] in "2468":
+                return False
+            else:
+                return True
         
